@@ -4,6 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { BasicComponent } from './basic/basic.component';
 import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
+import { reducers } from './store';
+
 
 @NgModule({
   declarations: [
@@ -13,7 +17,11 @@ import { StoreModule } from '@ngrx/store';
   imports: [
     BrowserModule,
     HttpClientModule,
-    StoreModule
+    StoreModule.forRoot(reducers),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production, // Restrict extension to log-only mode
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
