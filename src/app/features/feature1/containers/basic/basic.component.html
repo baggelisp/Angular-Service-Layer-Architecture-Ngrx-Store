@@ -1,2 +1,2 @@
 <button (click)='service.getToDos()'>Get data</button>
-<app-my-table></app-my-table>
+<app-my-table [todos]='service.toDos$ | async'></app-my-table>

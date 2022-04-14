@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { selectFeature1State } from '../reducers/feature1.reducer';
+import { actions } from '../actions/feature1.actions';
+import { selectTodosState } from '../reducers/feature1.reducer';
 
 @Injectable()
 export class Feature1Service {
   toDos$: Observable<any[]>;
 
   constructor(private store: Store) { 
-    this.toDos$ = store.select(selectFeature1State);
-    this.toDos$.subscribe(a => console.log(a))
+    this.toDos$ = store.select(selectTodosState);
   }
 
   getToDos(){
-    this.store.dispatch({ type: '[ToDos Page] Load ToDos' });
+    this.store.dispatch(actions.loadToDos());
   }
 }
