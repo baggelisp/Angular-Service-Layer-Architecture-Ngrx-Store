@@ -9,11 +9,11 @@ interface TodoInt {
 
 
 @Component({
-  selector: 'app-table',
-  templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  selector: 'app-my-table',
+  templateUrl: './my-table.component.html',
+  styleUrls: ['./my-table.component.scss']
 })
-export class TableComponent implements OnInit {
+export class MyTableComponent implements OnInit {
 
   @Input() todos: TodoInt[] = []; 
   

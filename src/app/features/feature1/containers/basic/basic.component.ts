@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Feature1Service } from '../../services/feature1.service';
 
 @Component({
   selector: 'app-basic',
@@ -7,12 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: Feature1Service) { }
 
   ngOnInit(): void {
   }
 
-  getToDos(){
-    
-  }
+
 }
