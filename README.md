@@ -11,7 +11,7 @@ Find More Here [https://v8.ngrx.io/](https://v8.ngrx.io/docs)
 
 ## Feature Module Structure
 
-![folder-structure](./images/1.png)
+![folder-structure](./images/2.png)
 
 
 ## Simple Version
