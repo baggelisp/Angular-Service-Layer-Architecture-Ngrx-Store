@@ -8,7 +8,7 @@ const routes: Routes = [
     component: MainSectionComponent,
     children: [
         {
-            path: 'feature1',
+            path: '',
           loadChildren: () => import('./features/feature1/feature1.module').then(m => m.Feature1Module)
         },
         {
